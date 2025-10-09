@@ -1,0 +1,14 @@
+{
+    "tools": {
+        "cancel": "Cancel"
+    },
+    "localization": {
+        "ru": "Russian",
+        "en": "English"
+    },
+    "section": {
+        "market": "Market",
+        "home": "Home",
+        "deck": "Deck"
+    }
+}
