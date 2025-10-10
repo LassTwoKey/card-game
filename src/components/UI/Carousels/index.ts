@@ -7,7 +7,7 @@ export interface Slide {
     icon?: string;
 }
 
-export interface PropType {
+export interface PaginationCarouselPropType {
     slides: Slide[];
     options?: EmblaOptionsType;
     thumbOptions?: EmblaOptionsType;

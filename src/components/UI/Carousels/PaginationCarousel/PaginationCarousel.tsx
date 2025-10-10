@@ -1,18 +1,15 @@
 import { useCallback, useEffect, useState } from 'react';
-import classes from './PaginationCarousel.module.scss';
 import useEmblaCarousel from 'embla-carousel-react';
-import { useTranslation } from 'react-i18next';
-import { Button } from '@mantine/core';
-import { PropType } from '@/components/UI/Carousels';
+import { TabButtonsSlider } from '@/components/UI/Buttons';
+import { PaginationCarouselPropType } from '@/components/UI/Carousels';
+import classes from './PaginationCarousel.module.scss';
 
 /** Prototype from https://www.embla-carousel.com/examples/predefined/#thumbnails */
 
-export function PaginationCarousel(props: PropType) {
+export function PaginationCarousel(props: PaginationCarouselPropType) {
     const { slides, options, thumbOptions } = props;
 
-    const { t } = useTranslation();
-
-    const [selectedIndex, setSelectedIndex] = useState(0);
+    const [selectedIndex, setSelectedIndex] = useState(options?.startIndex ?? 0);
     const [emblaMainRef, emblaMainApi] = useEmblaCarousel(options);
     const [emblaThumbsRef, emblaThumbsApi] = useEmblaCarousel(thumbOptions);
 
@@ -57,13 +54,12 @@ export function PaginationCarousel(props: PropType) {
 
             <div className={classes.carousel_thumbs}>
                 <div className={classes.carousel_thumbs__viewport} ref={emblaThumbsRef}>
-                    <div className={classes.carousel_thumbs__container}>
-                        {slides.map((slide, index) => (
-                            <Button key={slide.id} onClick={() => onThumbClick(index)}>
-                                {t(slide.title)} {index === selectedIndex ? selectedIndex : ''}
-                            </Button>
-                        ))}
-                    </div>
+                    <TabButtonsSlider
+                        className={classes.carousel_thumbs__container}
+                        buttons={slides}
+                        selectedIndex={selectedIndex}
+                        onClick={onThumbClick}
+                    />
                 </div>
             </div>
         </div>
