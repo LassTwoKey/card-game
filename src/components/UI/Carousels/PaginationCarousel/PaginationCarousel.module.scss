@@ -35,3 +35,18 @@
         flex-direction: row;
     }
 }
+
+/* В вашем CSS-модуле */
+.progress {
+    height: 4px;
+    background-color: var(--mantine-color-gray-3);
+    position: relative;
+    overflow: hidden;
+    border-radius: 2px;
+}
+
+.progressBar {
+    height: 100%;
+    background: red;
+    transition: width 0.1s ease-out;
+}
