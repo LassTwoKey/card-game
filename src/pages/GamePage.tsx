@@ -9,6 +9,7 @@ export function GamePage() {
             options={{
                 startIndex: Math.floor(SECTION_LIST.length / 2),
                 watchDrag: supportsTouch(),
+                duration: 20,
             }}
             thumbOptions={{
                 containScroll: 'keepSnaps',

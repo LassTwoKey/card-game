@@ -1,0 +1,298 @@
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="512"
+    height="512"
+    style="
+        width: 100%;
+        height: 100%;
+        transform: translate3d(0, 0, 0) scale(1.4);
+        content-visibility: visible;
+    "
+    viewBox="0 0 430 430"
+>
+    <defs>
+        <mask id="q">
+            <path fill="#fff" d="M0 0h430v430H0z" />
+            <path d="M184.75-131.872h-376.5v75.75h376.5z" />
+        </mask>
+        <mask id="p" mask-type="alpha">
+            <use xmlns:ns1="http://www.w3.org/1999/xlink" ns1:href="#a" />
+        </mask>
+        <mask id="n">
+            <path fill="#fff" d="M-215-215h430v430h-430z" />
+            <path d="M214.5-178H-204v123h418.5z" />
+        </mask>
+        <mask id="m">
+            <path fill="#fff" d="M-215-215h430v430h-430z" />
+            <path d="M252-183.5h-451.5V-55H252z" />
+        </mask>
+        <mask id="l" mask-type="alpha">
+            <use xmlns:ns2="http://www.w3.org/1999/xlink" ns2:href="#b" />
+        </mask>
+        <mask id="j">
+            <path fill="#fff" d="M0 0h430v430H0z" />
+            <path d="M175.5-102.75H-167v49h342.5z" />
+        </mask>
+        <mask id="i" mask-type="alpha">
+            <use xmlns:ns3="http://www.w3.org/1999/xlink" ns3:href="#c" />
+        </mask>
+        <mask id="h" mask-type="alpha">
+            <use xmlns:ns4="http://www.w3.org/1999/xlink" ns4:href="#d" />
+        </mask>
+        <mask id="g">
+            <path fill="#fff" d="M0 0h430v430H0z" />
+            <path d="M202-172.5h-446.5V-56H202z" />
+        </mask>
+        <clipPath id="e"><path d="M0 0h430v430H0z" /></clipPath>
+        <clipPath id="o"><path d="M0 0h430v430H0z" /></clipPath>
+        <clipPath id="k"><path d="M0 0h430v430H0z" /></clipPath>
+        <clipPath id="f"><path d="M0 0h430v430H0z" /></clipPath>
+        <g id="a" style="display: none">
+            <path />
+            <path />
+        </g>
+        <g id="c" style="display: none">
+            <path />
+            <path style="mix-blend-mode: multiply" />
+        </g>
+        <g id="d" style="display: none">
+            <path />
+            <path style="mix-blend-mode: multiply" />
+        </g>
+        <path
+            id="b"
+            fill="#4BB3FD"
+            d="M212 295.56a3 3 0 0 0 3-3v-61.61a3 3 0 0 0-3-3H111.25a3 3 0 0 0-3 3v61.61a3 3 0 0 0 3 3zm45.972-53.758h47.37a3 3 0 0 1 3 3v47.37a3 3 0 0 1-3 3h-47.37a3 3 0 0 1-3-3v-47.37a3 3 0 0 1 3-3"
+            style="display: block"
+        />
+    </defs>
+    <g clip-path="url(#e)">
+        <g clip-path="url(#f)" style="display: none">
+            <path class="quinary" style="display: none" />
+            <path class="quinary" style="mix-blend-mode: multiply; display: none" />
+            <path class="quaternary" style="display: none" />
+            <path class="primary" style="display: none" />
+            <path fill="none" class="secondary" style="display: none" />
+            <path fill="none" class="secondary" style="display: none" />
+            <path class="quaternary" style="display: none" />
+            <path class="primary" style="display: none" />
+            <path class="primary" style="display: none" />
+            <path class="secondary" style="display: none" />
+            <path class="secondary" style="display: none" />
+            <path class="quaternary" style="display: none" />
+            <path class="primary" style="display: none" />
+            <path class="secondary" style="display: none" />
+            <path fill="none" class="primary" style="mix-blend-mode: multiply; display: none" />
+            <path class="secondary" style="display: none" />
+            <path class="secondary" style="mix-blend-mode: multiply; display: none" />
+            <g style="display: none">
+                <path class="primary" />
+                <path class="primary" />
+                <path class="tertiary" />
+                <path class="tertiary" />
+            </g>
+            <path class="primary" style="mix-blend-mode: multiply; display: none" />
+            <g mask="url(#g)" style="mix-blend-mode: multiply; display: none">
+                <path class="primary" />
+                <path class="primary" />
+                <path class="tertiary" />
+                <path class="tertiary" />
+            </g>
+            <path class="secondary" style="display: none" />
+            <path class="quaternary" style="display: none" />
+            <path class="primary" style="display: none" />
+            <path class="secondary" style="display: none" />
+            <path class="secondary" style="mix-blend-mode: multiply; display: none" />
+            <path class="primary" style="display: none" />
+            <path class="primary" style="mix-blend-mode: multiply; display: none" />
+            <path class="quinary" style="display: none" />
+            <path class="quinary" style="mix-blend-mode: multiply; display: none" />
+            <g style="display: none">
+                <path class="primary" />
+                <path class="primary" style="mix-blend-mode: multiply" />
+            </g>
+            <path class="secondary" style="display: none" />
+            <path class="secondary" style="mix-blend-mode: multiply; display: none" />
+            <path class="primary" style="display: none" />
+            <path class="primary" style="mix-blend-mode: multiply; display: none" />
+            <path class="quinary" style="display: none" />
+            <path class="quinary" style="mix-blend-mode: multiply; display: none" />
+            <path class="secondary" style="display: none" />
+            <path class="secondary" style="mix-blend-mode: multiply; display: none" />
+            <path class="quaternary" style="display: none" />
+            <path class="quaternary" style="display: none" />
+            <path class="primary" style="display: none" />
+            <path class="secondary" style="display: none" />
+            <path class="quaternary" style="display: none" />
+            <path class="primary" style="display: none" />
+            <path class="primary" style="display: none" />
+            <path class="secondary" style="display: none" />
+            <path class="primary" style="display: none" />
+            <g mask="url(#h)" style="display: none"><path class="secondary" /></g>
+            <path class="primary" style="display: none" />
+            <g mask="url(#i)" style="display: none"><path class="secondary" /></g>
+            <g style="display: none">
+                <path class="primary" />
+                <path class="primary" />
+                <path class="tertiary" />
+                <path class="tertiary" />
+            </g>
+            <g mask="url(#j)" style="mix-blend-mode: multiply; display: none">
+                <path class="primary" />
+                <path class="primary" />
+                <path class="tertiary" />
+                <path class="tertiary" />
+            </g>
+            <path class="primary" style="mix-blend-mode: multiply; display: none" />
+        </g>
+        <g clip-path="url(#k)" style="display: block">
+            <path
+                fill="#FFC738"
+                d="M133.43 96.215v-195.43h-266.86v195.43a3 3 0 0 0 3 3h260.86a3 3 0 0 0 3-3"
+                class="quinary"
+                style="display: block"
+                transform="translate(215 249.715)"
+            />
+            <path
+                fill="#4BB3FD"
+                d="M50.375 33.805a3 3 0 0 0 3-3v-61.61a3 3 0 0 0-3-3h-100.75a3 3 0 0 0-3 3v61.61a3 3 0 0 0 3 3z"
+                class="quaternary"
+                style="display: block"
+                transform="translate(161.625 261.755)"
+            />
+            <g opacity=".5" style="mix-blend-mode: multiply; display: block">
+                <path
+                    fill="#FFC738"
+                    d="M95.32 179.93H81.57v166a3 3 0 0 0 3 3h10.75z"
+                    class="quinary"
+                    opacity="1"
+                />
+            </g>
+            <path
+                fill="#EBE6EF"
+                d="M40.19 60.045v-117.09a3 3 0 0 0-3-3h-74.38a3 3 0 0 0-3 3v117.09"
+                class="primary"
+                style="display: block"
+                transform="translate(281.56 288.885)"
+            />
+            <path
+                fill="#4BB3FD"
+                d="M-23.685-26.685h47.37a3 3 0 0 1 3 3v47.37a3 3 0 0 1-3 3h-47.37a3 3 0 0 1-3-3v-47.37a3 3 0 0 1 3-3"
+                class="quaternary"
+                style="display: block"
+                transform="translate(281.715 268.875)"
+            />
+            <g mask="url(#l)" opacity=".3" style="display: block">
+                <path
+                    fill="#EBE6EF"
+                    d="M271.405 348.923a3 3 0 0 1-1.402 2.522L103.325 184.826h29.57l138.51 138.46zM80.939 184.022l155.236 155.485h-53.95L28.538 185.603zm116.501.006 155.235 155.485-38.7.109-86.488-86.61-16.699-67.076zm38 .028 155.235 155.485-17.2.355-153.686-153.904zm273.963 164.867a3 3 0 0 1-1.402 2.522L341.323 184.826h29.57l138.51 138.46zM318.937 184.022l155.236 155.485h-53.95L266.536 185.603zm116.501.006 155.235 155.485-38.7.109-88.647-88.773-65.04-65.131zm38 .028 155.235 155.485-17.2.355-153.686-153.904z"
+                    class="primary"
+                    opacity="1"
+                />
+            </g>
+            <path
+                fill="#3A3347"
+                d="M-53.375-5.88h106.75v8.76a3 3 0 0 1-3 3h-100.75a3 3 0 0 1-3-3z"
+                class="secondary"
+                style="display: block"
+                transform="translate(161.625 289.68)"
+            />
+            <g fill="#EBE6EF" style="display: block">
+                <path
+                    d="M118.928 158.958c0 17.686-14.337 32.024-32.023 32.024s-32.024-14.338-32.024-32.024l26.686-77.391h266.866l26.686 77.391c0 17.686-14.338 32.024-32.024 32.024s-32.023-14.338-32.023-32.024"
+                    class="primary"
+                />
+                <path
+                    d="M247.024 158.958c0 17.686-14.338 32.024-32.024 32.024s-32.024-14.338-32.024-32.024"
+                    class="primary"
+                />
+            </g>
+            <g
+                fill="#EBE6EF"
+                mask="url(#m)"
+                opacity=".5"
+                style="mix-blend-mode: multiply; display: block"
+                transform="translate(215 215)"
+            >
+                <path
+                    d="M-96.072-56.042c0 17.686-14.337 32.024-32.023 32.024s-32.024-14.338-32.024-32.024l26.686-77.391h266.866l26.686 77.391c0 17.686-14.338 32.024-32.024 32.024S96.072-38.356 96.072-56.042"
+                    class="primary"
+                    opacity="1"
+                />
+                <path
+                    d="M32.024-56.042c0 17.686-14.338 32.024-32.024 32.024s-32.024-14.338-32.024-32.024"
+                    class="primary"
+                    opacity="1"
+                />
+            </g>
+            <g fill="#92140C" style="display: block">
+                <path
+                    d="m241.687 81.567 5.337 77.391c0 17.686 14.338 32.024 32.024 32.024s32.024-14.338 32.024-32.024L295.06 81.567m-160.12 0-16.012 77.391c0 17.686 14.338 32.024 32.024 32.024s32.024-14.338 32.024-32.024l5.337-77.391"
+                    class="tertiary"
+                />
+                <path
+                    d="m241.687 81.567 5.337 77.391c0 17.686 14.338 32.024 32.024 32.024s32.024-14.338 32.024-32.024L295.06 81.567m-160.12 0-16.012 77.391c0 17.686 14.338 32.024 32.024 32.024s32.024-14.338 32.024-32.024l5.337-77.391"
+                    class="tertiary"
+                />
+            </g>
+            <g
+                mask="url(#n)"
+                opacity=".5"
+                style="mix-blend-mode: multiply; display: block"
+                transform="translate(215 215)"
+            >
+                <path
+                    fill="#92140C"
+                    d="m26.687-133.433 5.337 77.391c0 17.686 14.338 32.024 32.024 32.024s32.024-14.338 32.024-32.024L80.06-133.433m-160.12 0-16.012 77.391c0 17.686 14.338 32.024 32.024 32.024s32.024-14.338 32.024-32.024l5.337-77.391"
+                    class="tertiary"
+                    opacity="1"
+                />
+            </g>
+            <path
+                fill="none"
+                stroke="#3A3347"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="10"
+                d="M.005 0h-.01"
+                class="secondary"
+                style="display: block"
+                transform="translate(307.828 313.95)"
+            />
+            <path
+                fill="#3A3347"
+                d="M129.43-6.67h-258.86a4 4 0 0 0-4 4v9.34h266.86v-9.34a4 4 0 0 0-4-4"
+                class="secondary"
+                style="display: block"
+                transform="translate(215 75.39)"
+            />
+        </g>
+        <g clip-path="url(#o)" style="display: none">
+            <path class="secondary" style="display: none" />
+            <path class="quinary" style="display: none" />
+            <path class="quaternary" style="display: none" />
+            <path class="quinary" style="mix-blend-mode: multiply; display: none" />
+            <path class="primary" style="display: none" />
+            <path class="quaternary" style="display: none" />
+            <g mask="url(#p)" style="display: none">
+                <path class="primary" />
+                <path class="primary" />
+            </g>
+            <path class="secondary" style="display: none" />
+            <g style="display: none">
+                <path class="primary" />
+                <path class="primary" />
+                <path class="tertiary" />
+                <path class="tertiary" />
+            </g>
+            <g mask="url(#q)" style="mix-blend-mode: multiply; display: none">
+                <path class="primary" />
+                <path class="primary" />
+                <path class="tertiary" />
+                <path class="tertiary" />
+            </g>
+            <path fill="none" class="secondary" style="display: none" />
+            <path class="secondary" style="display: none" />
+        </g>
+    </g>
+</svg>

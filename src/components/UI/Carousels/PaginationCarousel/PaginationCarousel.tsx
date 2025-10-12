@@ -1,68 +1,44 @@
-import { useCallback, useEffect, useState } from 'react';
+import { useRef, useState } from 'react';
+import cn from 'classnames';
+import { EmblaOptionsType } from 'embla-carousel';
 import useEmblaCarousel from 'embla-carousel-react';
-import { TabButtonsSlider } from '@/components/UI/Buttons';
-import { PaginationCarouselPropType } from '@/components/UI/Carousels';
+import { useTranslation } from 'react-i18next';
+import { Button } from '@mantine/core';
+import { Slide } from '@/components/UI/Carousels';
+import { useScrollCarousel } from './hooks';
 import classes from './PaginationCarousel.module.scss';
 
-/** Prototype from https://www.embla-carousel.com/examples/predefined/#thumbnails */
+export interface PaginationCarouselProps {
+    slides: Slide[];
+    options?: EmblaOptionsType;
+    thumbOptions?: EmblaOptionsType;
+}
 
-export function PaginationCarousel(props: PaginationCarouselPropType) {
+export function PaginationCarousel(props: PaginationCarouselProps) {
     const { slides, options, thumbOptions } = props;
 
     const [selectedIndex, setSelectedIndex] = useState(options?.startIndex ?? 0);
-    const [scrollProgress, setScrollProgress] = useState(0); // ← новое состояние
-
+    const [highlightStyles, setHighlightStyles] = useState({ left: 0, width: 0 });
     const [emblaMainRef, emblaMainApi] = useEmblaCarousel(options);
     const [emblaThumbsRef, emblaThumbsApi] = useEmblaCarousel(thumbOptions);
+    const tabsContainerRef = useRef<HTMLDivElement>(null);
+    const tabRefs = useRef<(HTMLButtonElement | null)[]>([]);
 
-    // Обработчик прокрутки (для scrollProgress)
-    const onScroll = useCallback(() => {
-        if (!emblaMainApi) return;
+    const { onThumbClick } = useScrollCarousel({
+        emblaMainApi,
+        emblaThumbsApi,
+        slides,
+        setSelectedIndex,
+        tabsContainerRef,
+        tabRefs,
+        setHighlightStyles,
+    });
 
-        const progress = emblaMainApi.scrollProgress();
-        setScrollProgress(progress);
-    }, [emblaMainApi]);
-
-    const onThumbClick = useCallback(
-        (index: number) => {
-            if (!emblaMainApi || !emblaThumbsApi) return;
-            emblaMainApi.scrollTo(index);
-        },
-        [emblaMainApi, emblaThumbsApi]
-    );
-
-    const onSelect = useCallback(() => {
-        if (!emblaMainApi || !emblaThumbsApi) return;
-        const index = emblaMainApi.selectedScrollSnap();
-        setSelectedIndex(index);
-        emblaThumbsApi.scrollTo(index);
-    }, [emblaMainApi, emblaThumbsApi]);
-
-    // Подписка на события
-    useEffect(() => {
-        if (!emblaMainApi) return;
-
-        onSelect(); // инициализация
-        onScroll(); // инициализация прогресса
-
-        // Подписываемся
-        emblaMainApi.on('select', onSelect);
-        emblaMainApi.on('scroll', onScroll);
-        emblaMainApi.on('reInit', onSelect);
-
-        // Отписываемся при размонтировании или изменении API
-        return () => {
-            emblaMainApi.off('select', onSelect);
-            emblaMainApi.off('scroll', onScroll);
-            emblaMainApi.off('reInit', onSelect);
-        };
-    }, [emblaMainApi, onSelect, onScroll]);
-
-    // Теперь вы можете использовать scrollProgress, например:
-    // console.log('Прогресс прокрутки:', scrollProgress);
+    const { t } = useTranslation();
 
     return (
         <div className={classes.carousel}>
+            {/* Main carousel */}
             <div className={classes.carousel__viewport} ref={emblaMainRef}>
                 <div className={classes.carousel__container}>
                     {slides.map((slide) => (
@@ -73,23 +49,38 @@ export function PaginationCarousel(props: PaginationCarouselPropType) {
                 </div>
             </div>
 
-            {/* Пример: индикатор прогресса */}
-            <div>{scrollProgress ?? '0'}</div>
-            <div className={classes.progress}>
-                <div
-                    className={classes.progressBar}
-                    style={{ width: `${scrollProgress * 100}%` }}
-                />
-            </div>
-
+            {/* Tabs with highlight styles */}
             <div className={classes.carousel_thumbs}>
                 <div className={classes.carousel_thumbs__viewport} ref={emblaThumbsRef}>
-                    <TabButtonsSlider
-                        className={classes.carousel_thumbs__container}
-                        buttons={slides}
-                        selectedIndex={selectedIndex}
-                        onClick={onThumbClick}
-                    />
+                    <div className={classes.carousel_thumbs__container} ref={tabsContainerRef}>
+                        {slides.map((slide, index) => (
+                            <Button
+                                key={slide.id}
+                                ref={(el) => {
+                                    tabRefs.current[index] = el;
+                                }}
+                                unstyled
+                                variant="transparent"
+                                onClick={() => onThumbClick(index)}
+                                className={cn(
+                                    classes.button,
+                                    index === selectedIndex && classes.active
+                                )}
+                            >
+                                <span className={classes.button__content}>
+                                    <span className={classes.button__icon}>
+                                        <img src={slide.icon} alt="Market" width={40} height={40} />
+                                    </span>
+                                    {index === selectedIndex && (
+                                        <span className={classes.button__text}>
+                                            {t(slide.title)}
+                                        </span>
+                                    )}
+                                </span>
+                            </Button>
+                        ))}
+                        <div className={classes.highlight} style={highlightStyles} />
+                    </div>
                 </div>
             </div>
         </div>
