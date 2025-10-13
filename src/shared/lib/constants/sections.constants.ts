@@ -1,9 +1,7 @@
 import deckIcon from '@/assets/icons/deck.svg';
 import homeIcon from '@/assets/icons/home.svg';
 import marketIcon from '@/assets/icons/market.svg';
-import DeckSection from '@/components/MainSections/DeckSection/DeckSection';
-import HomeSection from '@/components/MainSections/HomeSection/HomeSection';
-import MarketSection from '@/components/MainSections/MarketSection/MarketSection';
+import { DeckSection, HomeSection, MarketSection } from '@/widgets/main-sections';
 
 /** Dictionary of app section names*/
 export enum SectionDict {
