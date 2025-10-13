@@ -1,3 +1,5 @@
+import { PaginationCarousel } from './pagination-carousel/ui/PaginationCarousel';
+
 export interface Slide {
     id: string;
     component: () => React.ReactNode;
@@ -10,4 +12,4 @@ export interface HighlightStyles {
     width: number;
 }
 
-export { PaginationCarousel } from '@/shared/ui/Carousels/PaginationCarousel/PaginationCarousel';
+export { PaginationCarousel };

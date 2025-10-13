@@ -1,15 +1,14 @@
 import { useTranslation } from 'react-i18next';
-import { Button, Text, Title } from '@mantine/core';
+import { Text, Title } from '@mantine/core';
+import { HomeTopBlock } from '@/features/home-top-block';
 
 export default function HomeSection() {
-    const { t, i18n } = useTranslation();
-
-    const changeLanguage = (lng: string) => {
-        i18n.changeLanguage(lng);
-    };
+    const { t } = useTranslation();
 
     return (
         <section>
+            <HomeTopBlock />
+
             <Title order={1} mb="md">
                 {t('section.home')}
             </Title>
@@ -19,11 +18,6 @@ export default function HomeSection() {
                 accusantium eius quam deserunt! Voluptas tenetur eum neque voluptatum
                 necessitatibus?
             </Text>
-
-            <Button mr="md" onClick={() => changeLanguage('en')}>
-                {t('localization.en')}
-            </Button>
-            <Button onClick={() => changeLanguage('ru')}>{t('localization.ru')}</Button>
         </section>
     );
 }

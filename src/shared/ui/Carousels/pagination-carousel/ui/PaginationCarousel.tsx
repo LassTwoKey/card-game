@@ -5,7 +5,8 @@ import useEmblaCarousel from 'embla-carousel-react';
 import { useTranslation } from 'react-i18next';
 import { Button } from '@mantine/core';
 import { Slide } from '@/shared/ui/Carousels';
-import { useScrollCarousel } from './hooks';
+import { AppContainer } from '@/shared/ui/Containers';
+import { useScrollCarousel } from '../models';
 import classes from './PaginationCarousel.module.scss';
 
 export interface PaginationCarouselProps {
@@ -42,9 +43,9 @@ export function PaginationCarousel(props: PaginationCarouselProps) {
             <div className={classes.carousel__viewport} ref={emblaMainRef}>
                 <div className={classes.carousel__container}>
                     {slides.map((slide) => (
-                        <div className={classes.carousel__slide} key={slide.id}>
+                        <AppContainer className={classes.carousel__slide} key={slide.id}>
                             {slide.component()}
-                        </div>
+                        </AppContainer>
                     ))}
                 </div>
             </div>

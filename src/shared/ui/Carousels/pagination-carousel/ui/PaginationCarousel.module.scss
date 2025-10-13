@@ -4,6 +4,7 @@
     margin: auto;
     display: flex;
     flex-direction: column;
+    padding-top: var(--mantine-height-header);
 
     &__viewport {
         flex: 1 1 auto;
@@ -19,8 +20,6 @@
         transform: translate3d(0, 0, 0);
         flex: 0 0 100%;
         min-width: 0;
-        padding-left: 1rem;
-        padding-right: 1rem;
     }
 
     &_thumbs {
@@ -57,7 +56,7 @@
     border: var(--button-bd, calc(0.0625rem * var(--mantine-scale)) solid transparent);
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
-    padding-bottom: 0.8rem;
+    padding-bottom: 0.6rem;
     padding-right: 0.8rem;
     padding-left: 0.8rem;
 

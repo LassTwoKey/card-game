@@ -9,7 +9,7 @@ import {
 const cssResolver: CSSVariablesResolver = () => ({
     variables: {},
     dark: {
-        // '--mantine-color-text': '#f3f3f3',
+        '--mantine-height-header': '3rem',
     },
     light: {},
 });
