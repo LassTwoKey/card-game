@@ -2,7 +2,7 @@ import { Dispatch, RefObject, SetStateAction, useEffect, useRef } from 'react';
 import { useOnScroll, useOnSelect, useOnThumbClick } from '.';
 import { EmblaCarouselType } from 'embla-carousel';
 import { useTranslation } from 'react-i18next';
-import { HighlightStyles, Slide } from '@/components/UI/Carousels';
+import { HighlightStyles, Slide } from '@/shared/ui/Carousels';
 
 interface UseScrollCarouselProps {
     emblaMainApi?: EmblaCarouselType;

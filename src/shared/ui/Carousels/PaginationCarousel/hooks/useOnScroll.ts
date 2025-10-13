@@ -1,6 +1,6 @@
 import { Dispatch, RefObject, SetStateAction, useCallback } from 'react';
 import { EmblaCarouselType } from 'embla-carousel';
-import { HighlightStyles, Slide } from '@/components/UI/Carousels';
+import { HighlightStyles, Slide } from '@/shared/ui/Carousels';
 
 interface UseOnScrollProps {
     emblaMainApi?: EmblaCarouselType;

@@ -1,5 +1,5 @@
-import { SECTION_LIST } from '@/constants/sections.constants';
-import { supportsTouch } from '@/utils';
+import { SECTION_LIST } from '@/shared/lib/constants/sections.constants';
+import { supportsTouch } from '@/shared/lib/utils/app';
 import { PaginationCarousel } from './PaginationCarousel';
 
 export default {
@@ -12,6 +12,7 @@ export const Usage = () => (
         options={{
             startIndex: Math.floor(SECTION_LIST.length / 2),
             watchDrag: supportsTouch(),
+            duration: 20,
         }}
         thumbOptions={{
             containScroll: 'keepSnaps',

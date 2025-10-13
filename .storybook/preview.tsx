@@ -1,5 +1,5 @@
 import { ColorSchemeScript } from '@mantine/core';
-import MantineProvider from '@/providers/MantineProvider';
+import MantineProvider from '@/app/providers/MantineProvider';
 
 import '@/assets/i18n';
 import '@mantine/core/styles.css';

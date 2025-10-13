@@ -4,7 +4,7 @@ import { EmblaOptionsType } from 'embla-carousel';
 import useEmblaCarousel from 'embla-carousel-react';
 import { useTranslation } from 'react-i18next';
 import { Button } from '@mantine/core';
-import { Slide } from '@/components/UI/Carousels';
+import { Slide } from '@/shared/ui/Carousels';
 import { useScrollCarousel } from './hooks';
 import classes from './PaginationCarousel.module.scss';
 

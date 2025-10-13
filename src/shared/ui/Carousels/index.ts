@@ -10,4 +10,4 @@ export interface HighlightStyles {
     width: number;
 }
 
-export { PaginationCarousel } from '@/components/UI/Carousels/PaginationCarousel/PaginationCarousel';
+export { PaginationCarousel } from '@/shared/ui/Carousels/PaginationCarousel/PaginationCarousel';

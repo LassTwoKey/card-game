@@ -1,6 +1,6 @@
-import { PaginationCarousel } from '@/components/UI/Carousels';
-import { SECTION_LIST } from '@/constants/sections.constants';
-import { supportsTouch } from '@/utils';
+import { SECTION_LIST } from '@/shared/lib/constants/sections.constants';
+import { supportsTouch } from '@/shared/lib/utils/app';
+import { PaginationCarousel } from '@/shared/ui/Carousels';
 
 export function GamePage() {
     return (
