@@ -1,8 +1,8 @@
 import { Card, mapCardToView } from '@/entities/card';
 import { SECTION_LIST } from '@/shared/lib/constants/sections.constants';
 import { supportsTouch } from '@/shared/lib/utils/app';
-import { PaginationCarousel } from '@/shared/ui/Carousels';
-import { TopMenu } from '@/widgets/top-menu';
+import PaginationCarousel from '@/shared/ui/pagination-carousel';
+import AppHeader from '@/widgets/app-header';
 
 const fireballCard: Card = {
     id: 'fireball-001',
@@ -103,7 +103,7 @@ console.log(mapCardToView(fireballCard));
 export function GamePage() {
     return (
         <>
-            <TopMenu />
+            <AppHeader />
             <PaginationCarousel
                 slides={SECTION_LIST}
                 options={{
