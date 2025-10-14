@@ -1,6 +1,12 @@
 {
     "tools": {
-        "cancel": "Cancel"
+        "cancel": "Cancel",
+        "settings": "Settings"
+    },
+    "general": {
+        "player": "Player",
+        "game_level": "Player level",
+        "saves": "Saves"
     },
     "localization": {
         "ru": "Russian",
@@ -10,5 +16,11 @@
         "market": "Market",
         "home": "Home",
         "deck": "Deck"
+    },
+    "home": {
+        "battle_log": "Battle log",
+        "quests": "Quests",
+        "menu": "Menu",
+        "stats": "Game stats"
     }
 }
