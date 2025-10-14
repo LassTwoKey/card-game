@@ -19,6 +19,8 @@ export default function AppHeader(props: BoxProps) {
                 height: 'var(--mantine-height-header)',
                 display: 'flex',
                 alignItems: 'center',
+                zIndex: 50,
+                background: 'var(--mantine-color-body)',
             }}
         >
             <Container>
