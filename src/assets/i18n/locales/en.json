@@ -6,7 +6,8 @@
     "general": {
         "player": "Player",
         "game_level": "Player level",
-        "saves": "Saves"
+        "saves": "Saves",
+        "player_progress": "Player progress"
     },
     "localization": {
         "ru": "Russian",

@@ -6,7 +6,8 @@
     "general": {
         "player": "Игрок",
         "game_level": "Уровень персонажа",
-        "saves": "Сохранения"
+        "saves": "Сохранения",
+        "player_progress": "Прогресс персонажа"
     },
     "localization": {
         "ru": "Русский",

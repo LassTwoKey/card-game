@@ -6,7 +6,7 @@ import Settings from '@/features/settings';
 
 export default function HomeBar() {
     return (
-        <Group justify="space-between">
+        <Group justify="space-between" gap="sm">
             <PlayerInfo />
 
             <Flex

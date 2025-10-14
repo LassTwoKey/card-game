@@ -19,7 +19,7 @@ export default function Settings() {
     return (
         <>
             {/* Modal */}
-            <Modal opened={opened} onClose={close} title={t('tools.settings')}>
+            <Modal title={t('tools.settings')} centered opened={opened} onClose={close}>
                 Тут будут Настройки
                 <Button mr="md" onClick={() => changeLanguage('en')}>
                     {t('localization.en')}
@@ -28,13 +28,13 @@ export default function Settings() {
                     {t('localization.ru')}
                 </Button>
                 <ActionIcon variant="transparent" onClick={open} title={t('general.saves')}>
-                    <Image src={savesIcon} alt={t('general.saves')} w={25} h={25} />
+                    <Image src={savesIcon} alt={t('general.saves')} w={32} h={32} />
                 </ActionIcon>
             </Modal>
 
             {/* Component View */}
             <ActionIcon variant="transparent" onClick={open} title={t('tools.settings')}>
-                <Image src={menuIcon} alt={t('tools.settings')} w={25} h={25} />
+                <Image src={menuIcon} alt={t('tools.settings')} w={32} h={32} />
             </ActionIcon>
         </>
     );

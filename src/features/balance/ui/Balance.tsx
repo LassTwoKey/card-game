@@ -6,8 +6,10 @@ export default function Balance() {
     const { balance } = useAppBalance();
 
     return (
-        <Flex align="center" gap="xs">
-            <Text fw={700}>{balance}</Text>
+        <Flex align="center" gap={{ base: '0.2rem', sm: 'xs' }}>
+            <Text fw={700} c="var(--mantine-color-bright)">
+                {balance}
+            </Text>
             <Image
                 src={coinsIcon}
                 alt="Balance"

@@ -13,13 +13,13 @@ export default function Quests() {
     return (
         <>
             {/* Modal */}
-            <Modal opened={opened} onClose={close} title={t('home.quests')}>
+            <Modal title={t('home.quests')} centered opened={opened} onClose={close}>
                 Тут будут квесты
             </Modal>
 
             {/* Component View */}
             <ActionIcon variant="transparent" onClick={open} title={t('home.quests')}>
-                <Image src={questsIcon} alt={t('home.quests')} w={25} h={25} />
+                <Image src={questsIcon} alt={t('home.quests')} w={32} h={32} />
             </ActionIcon>
         </>
     );

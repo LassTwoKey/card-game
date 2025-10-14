@@ -14,23 +14,32 @@ export default function PlayerInfo() {
     return (
         <>
             {/* Modal */}
-            <Modal opened={opened} onClose={close} title={t('home.stats')}>
+            <Modal title={t('home.stats')} centered opened={opened} onClose={close}>
                 Тут будет стата игрока
             </Modal>
 
             {/* Component View */}
             <Flex
-                miw={200}
+                miw={{ base: 0, sm: 200 }}
+                w={{ base: '50%', sm: 'auto' }}
                 bg="rgba(0, 0, 0, .3)"
-                px="sm"
-                py="sm"
+                px={{ base: 'xs', sm: 'sm' }}
+                py="xs"
                 bdrs="sm"
                 gap="xl"
                 align="center"
                 justify="space-between"
             >
                 <Button onClick={open} variant="transparent" p={0}>
-                    <Text fw={700}>{t('general.player')}</Text>
+                    <Text
+                        fw={700}
+                        maw={{ base: 'auto', sm: 70 }}
+                        fz={{ base: 'sm', sm: 'sm' }}
+                        c="var(--mantine-color-bright)"
+                        style={{ overflow: 'hidden', textOverflow: 'ellipsis' }}
+                    >
+                        {t('general.player')}
+                    </Text>
                     <Image
                         src={infoIcon}
                         alt={t('general.player')}
@@ -43,18 +52,18 @@ export default function PlayerInfo() {
                     />
                 </Button>
 
-                <Group bg="rgba(0, 0, 0, .5)" bdrs="sm" pr="sm" gap={0}>
+                <Group bg="rgba(0, 0, 0, .5)" bdrs="sm" pr="sm" gap={0} wrap="nowrap">
                     <Image
                         src={trophyIcon}
                         alt="trophies"
-                        w={25}
-                        h={25}
+                        w={{ base: 20, sm: 25 }}
+                        h={{ base: 20, sm: 25 }}
                         style={{
                             transform: 'scale(1.4) translateX(-10px)',
                         }}
                     />
 
-                    <Text fw={700} c="yellow">
+                    <Text fw={700} c="yellow" fz={{ base: 'xs', sm: 'sm' }}>
                         1230
                     </Text>
                 </Group>

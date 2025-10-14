@@ -1,16 +1,13 @@
-import { useTranslation } from 'react-i18next';
-import { ActionIcon, Box, Group, Progress, Text } from '@mantine/core';
+import { Box, Group, Progress, Text } from '@mantine/core';
+import PlayerProgress from '@/features/player-progress';
 import useProfileLevel from '@/shared/models/hooks/useProfileLevel';
 
 export default function ProfileLevelProgress() {
-    const { t } = useTranslation();
-    const { currentXP, maxXP, percentageToNextLevel, profileLevel } = useProfileLevel();
+    const { currentXP, maxXP, percentageToNextLevel } = useProfileLevel();
 
     return (
         <Group gap="xs" wrap="nowrap">
-            <ActionIcon title={t('general.game_level')}>
-                <Text fw={700}>{profileLevel}</Text>
-            </ActionIcon>
+            <PlayerProgress />
 
             <Box w={150} style={{ position: 'relative' }}>
                 <Progress.Root size={18} w={150}>
@@ -18,8 +15,8 @@ export default function ProfileLevelProgress() {
                 </Progress.Root>
 
                 <Text
-                    size="xs"
                     fw={700}
+                    c="var(--mantine-color-bright)"
                     style={{
                         position: 'absolute',
                         top: '50%',
@@ -27,7 +24,6 @@ export default function ProfileLevelProgress() {
                         transform: 'translate(-50%, -50%)',
                         pointerEvents: 'none',
                         userSelect: 'none',
-                        color: 'white',
                         textShadow: '0 1px 2px rgba(0,0,0,0.6)',
                     }}
                 >

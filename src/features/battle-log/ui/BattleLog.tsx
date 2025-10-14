@@ -13,13 +13,13 @@ export default function BattleLog() {
     return (
         <>
             {/* Modal */}
-            <Modal opened={opened} onClose={close} title={t('home.battle_log')}>
+            <Modal title={t('home.battle_log')} centered opened={opened} onClose={close}>
                 Тут будет история боев
             </Modal>
 
             {/* Component View */}
             <ActionIcon variant="transparent" onClick={open} title={t('home.battle_log')}>
-                <Image src={historyIcon} alt={t('home.battle_log')} w={25} h={25} />
+                <Image src={historyIcon} alt={t('home.battle_log')} w={32} h={32} />
             </ActionIcon>
         </>
     );
