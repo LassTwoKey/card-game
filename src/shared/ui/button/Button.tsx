@@ -3,6 +3,7 @@ import { ButtonProps, Button as MantineButton } from '@mantine/core';
 
 interface IButtonProps extends ButtonProps {
     onClick?: MouseEventHandler<HTMLButtonElement>;
+    title?: string;
 }
 
 export default function Button(props: IButtonProps) {

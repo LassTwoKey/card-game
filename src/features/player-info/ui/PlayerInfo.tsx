@@ -29,7 +29,13 @@ export default function PlayerInfo() {
             >
                 <Flex wrap={{ base: 'wrap', sm: 'nowrap' }} align="center">
                     {/* Profile */}
-                    <Button onClick={open} variant="transparent" p={0} mr={{ base: 0, sm: 'xl' }}>
+                    <Button
+                        title={t('home.stats')}
+                        variant="transparent"
+                        p={0}
+                        mr={{ base: 0, sm: 'xl' }}
+                        onClick={open}
+                    >
                         <Text
                             fw={700}
                             maw={{ base: 150, sm: 'auto' }}
