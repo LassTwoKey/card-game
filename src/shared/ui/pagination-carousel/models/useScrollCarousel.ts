@@ -60,14 +60,18 @@ export default function useScrollCarousel(props: UseScrollCarouselProps) {
         emblaMainApi.on('scroll', onScroll);
         emblaMainApi.on('reInit', onSelect);
 
-        window.addEventListener('resize', onScroll);
+        if (!import.meta.env.DEV) {
+            window.addEventListener('resize', onScroll);
+        }
 
         return () => {
             emblaMainApi.off('select', onSelect);
             emblaMainApi.off('scroll', onScroll);
             emblaMainApi.off('reInit', onSelect);
 
-            window.removeEventListener('resize', onScroll);
+            if (!import.meta.env.DEV) {
+                window.removeEventListener('resize', onScroll);
+            }
         };
     }, [emblaMainApi, useOnSelect, useOnScroll]);
 

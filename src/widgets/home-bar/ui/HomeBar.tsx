@@ -6,21 +6,20 @@ import Settings from '@/features/settings';
 
 export default function HomeBar() {
     return (
-        <Group justify="space-between" gap="sm">
+        <Group justify="space-between" align="stretch" gap="sm" wrap="nowrap">
             <PlayerInfo />
 
             <Flex
-                pl="sm"
-                py="sm"
                 bdrs="sm"
                 gap="sm"
                 align="center"
-                justify="flex-end"
-                wrap="nowrap"
+                justify="flex-start"
+                wrap="wrap"
+                direction="row-reverse"
             >
+                <Settings />
                 <BattleLog />
                 <Quests />
-                <Settings />
             </Flex>
         </Group>
     );

@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { useDisclosure } from '@mantine/hooks';
 import menuIcon from '@/assets/icons/menu.svg';
-import savesIcon from '@/assets/icons/saves.svg';
+import Saves from '@/features/saves';
 import ActionIcon from '@/shared/ui/action-icon';
 import Button from '@/shared/ui/button';
 import Image from '@/shared/ui/image';
@@ -27,14 +27,22 @@ export default function Settings() {
                 <Button mr="md" onClick={() => changeLanguage('ru')}>
                     {t('localization.ru')}
                 </Button>
-                <ActionIcon variant="transparent" onClick={open} title={t('general.saves')}>
-                    <Image src={savesIcon} alt={t('general.saves')} w={32} h={32} />
-                </ActionIcon>
+                <Saves />
             </Modal>
 
             {/* Component View */}
-            <ActionIcon variant="transparent" onClick={open} title={t('tools.settings')}>
-                <Image src={menuIcon} alt={t('tools.settings')} w={32} h={32} />
+            <ActionIcon
+                variant="transparent"
+                onClick={open}
+                title={t('tools.settings')}
+                bg="var(--mantine-main-lucid-bg)"
+                p="xs"
+                style={{
+                    flex: '1 1 47px',
+                    minWidth: '47px',
+                }}
+            >
+                <Image src={menuIcon} alt={t('tools.settings')} w={25} h={25} />
             </ActionIcon>
         </>
     );

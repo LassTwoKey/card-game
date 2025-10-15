@@ -10,6 +10,7 @@ const cssResolver: CSSVariablesResolver = () => ({
     variables: {},
     dark: {
         '--mantine-height-header': '3rem',
+        '--mantine-main-lucid-bg': 'rgba(0, 0, 0, .3)',
     },
     light: {},
 });

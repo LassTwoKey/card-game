@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { Flex, Group, Text } from '@mantine/core';
+import { Flex, Text } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import infoIcon from '@/assets/icons/info.svg';
 import trophyIcon from '@/assets/icons/trophy.svg';
@@ -20,53 +20,65 @@ export default function PlayerInfo() {
 
             {/* Component View */}
             <Flex
-                miw={{ base: 0, sm: 200 }}
-                w={{ base: '50%', sm: 'auto' }}
-                bg="rgba(0, 0, 0, .3)"
+                bg="var(--mantine-main-lucid-bg)"
                 px={{ base: 'xs', sm: 'sm' }}
                 py="xs"
                 bdrs="sm"
-                gap="xl"
-                align="center"
-                justify="space-between"
+                style={{ flex: '1 1 auto' }}
+                wrap={{ base: 'wrap', sm: 'nowrap' }}
             >
-                <Button onClick={open} variant="transparent" p={0}>
-                    <Text
-                        fw={700}
-                        maw={{ base: 'auto', sm: 70 }}
-                        fz={{ base: 'sm', sm: 'sm' }}
-                        c="var(--mantine-color-bright)"
-                        style={{ overflow: 'hidden', textOverflow: 'ellipsis' }}
+                <Flex wrap={{ base: 'wrap', sm: 'nowrap' }} align="center">
+                    {/* Profile */}
+                    <Button onClick={open} variant="transparent" p={0} mr={{ base: 0, sm: 'xl' }}>
+                        <Text
+                            fw={700}
+                            maw={{ base: 150, sm: 'auto' }}
+                            c="var(--mantine-color-bright)"
+                            style={{ overflow: 'hidden', textOverflow: 'ellipsis' }}
+                        >
+                            {t('general.player')}
+                        </Text>
+                        <Image
+                            src={infoIcon}
+                            alt={t('general.player')}
+                            w={18}
+                            h={18}
+                            ml="0.2rem"
+                            style={{
+                                transform: 'translateY(1px)',
+                            }}
+                        />
+                    </Button>
+
+                    {/* Trophies */}
+                    <Flex
+                        bdrs="sm"
+                        gap="xs"
+                        align="center"
+                        wrap="nowrap"
+                        bg="rgba(0, 0, 0, .5)"
+                        pos="relative"
+                        h="30"
+                        pr="lg"
+                        ml={14}
                     >
-                        {t('general.player')}
-                    </Text>
-                    <Image
-                        src={infoIcon}
-                        alt={t('general.player')}
-                        w={18}
-                        h={18}
-                        ml="0.2rem"
-                        style={{
-                            transform: 'translateY(2px)',
-                        }}
-                    />
-                </Button>
+                        <Image
+                            src={trophyIcon}
+                            alt="trophies"
+                            w={25}
+                            h={25}
+                            style={{
+                                transform: 'scale(1.5)',
+                                position: 'absolute',
+                                left: -10,
+                            }}
+                        />
 
-                <Group bg="rgba(0, 0, 0, .5)" bdrs="sm" pr="sm" gap={0} wrap="nowrap">
-                    <Image
-                        src={trophyIcon}
-                        alt="trophies"
-                        w={{ base: 20, sm: 25 }}
-                        h={{ base: 20, sm: 25 }}
-                        style={{
-                            transform: 'scale(1.4) translateX(-10px)',
-                        }}
-                    />
-
-                    <Text fw={700} c="yellow" fz={{ base: 'xs', sm: 'sm' }}>
-                        1230
-                    </Text>
-                </Group>
+                        <Text fw={700} c="yellow" pl="xl" fz="sm">
+                            1230
+                        </Text>
+                    </Flex>
+                </Flex>
             </Flex>
         </>
     );

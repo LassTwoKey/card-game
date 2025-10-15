@@ -18,8 +18,18 @@ export default function BattleLog() {
             </Modal>
 
             {/* Component View */}
-            <ActionIcon variant="transparent" onClick={open} title={t('home.battle_log')}>
-                <Image src={historyIcon} alt={t('home.battle_log')} w={32} h={32} />
+            <ActionIcon
+                variant="transparent"
+                onClick={open}
+                title={t('home.battle_log')}
+                bg="var(--mantine-main-lucid-bg)"
+                p="xs"
+                style={{
+                    flex: '1 1 47px',
+                    minWidth: '47px',
+                }}
+            >
+                <Image src={historyIcon} alt={t('home.battle_log')} w={25} h={25} />
             </ActionIcon>
         </>
     );
