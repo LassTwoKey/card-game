@@ -39,7 +39,7 @@ export default function PaginationCarousel(props: PaginationCarouselProps) {
     return (
         <div className={classes.carousel}>
             {/* Main carousel */}
-            <div className={classes.carousel__viewport} ref={emblaMainRef}>
+            <div id="carousel-content" className={classes.carousel__viewport} ref={emblaMainRef}>
                 <div className={classes.carousel__container}>
                     {slides.map((slide) => (
                         <Container className={classes.carousel__slide} key={slide.id}>

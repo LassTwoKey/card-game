@@ -23,5 +23,9 @@
         "quests": "Quests",
         "menu": "Menu",
         "stats": "Game stats"
+    },
+    "market": {
+        "offers": "Offers",
+        "buy_cards": "Buy Cards"
     }
 }

@@ -15,6 +15,11 @@ export default function useOnThumbClick(props: UseOnThumbClickProps) {
                 return;
             }
             emblaMainApi.scrollTo(index);
+
+            document.getElementById('carousel-content')?.scrollTo({
+                top: 0,
+                behavior: 'smooth',
+            });
         },
         [emblaMainApi, emblaThumbsApi]
     );

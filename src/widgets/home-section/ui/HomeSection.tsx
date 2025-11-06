@@ -1,9 +1,10 @@
+import { Box } from '@mantine/core';
 import HomeBar from '@/widgets/home-bar';
 
 export default function HomeSection() {
     return (
-        <section>
+        <Box component="section">
             <HomeBar />
-        </section>
+        </Box>
     );
 }
